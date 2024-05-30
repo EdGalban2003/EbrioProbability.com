@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación del Ebrio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-wrapper"> 
+        <div class="container">
+            <h1>Simulación del Ebrio 🥴</h1>
+            <label for="iterations">Número de iteraciones:</label>
+            <input type="number" id="iterations" value="100000" min="1">
+            <h6>Nota: Un número alto tardará más en procesarse...</h6>
+            <h6>Si tarda un poquito solo espera :)...</h6>
+            <div class="buttons">
+                <button class="Buttons" id="runSimulation">Iniciar Simulación</button>
+                <button class="Buttons" id="stopSimulation">Detener Simulación</button>
+                <button class="Buttons" id="resetSimulation">Reiniciar Simulación</button>
+            </div>
+            <div id="result"></div>
+            <canvas id="walkCanvas" width="500" height="500"></canvas>
+            <p>TODOS LOS DERECHOS RESERVADOS... ©</p>
+        </div>
+    </div> 
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <h3>Algoritmo de Simulación del problema del Ebrio...</h3>
+            <br>
+            <p>Supongamos que un ebrio está parado en una esquina, cuando decide caminar para que le pase el efecto
+            <p>Supongamos que existe una probabilidad igual de que se dirija al norte, sur, este u oeste al llegar a cada esquina.</p>
+            <p>Si camina 10 calles, ¿Cuál es la probabilidad de que termine su recorrido a dos calles de donde lo empezó?.</p>
+            <br>
+            <p>1. El Algoritmo calculara dicha probabilidad y de forma constante, ademas </p>
+            <p>tiene unos limites de error establecidos para encontrar la mejor solución.</p>
+            <p>2. El numero de iteraciones se repetira por segundo de forma continua,</p>
+            <p>si son 10k por ejemplo, cada segundo se repite el numero maximo de iteraciones.</p>
+            <p>3. El canvas muestra el mapeo completo de las actualizaciones del maximo de simulaciones</p>
+            <p>(Si no ta muy bonito pero ya estoy cansado jefe...).</p>
+            <br>
+            <p>Si tarda algo la Simulación disminuya el numero de iteraciones.</p>
+            <p>Con un maximo de 100k los resultados seran mas precisos, pero tardara algo el procesamiento...</p>
+            <br>
+            <hr>
+            <h4>Propiedad de: Esteban Galbán, 30274211.</h4>
+            <hr>
+            <br>
+            <button class="Buttons" id="closeModal">Cerrar</button> 
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
